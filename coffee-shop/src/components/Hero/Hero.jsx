@@ -39,7 +39,14 @@ const Hero = () => {
             </div>
             {/* Hero Image  section */}
             <div className="relative">
-              <img src={BlackCoffee} alt="" />
+              <img
+                src={BlackCoffee}
+                alt=""
+                className="relative z-40 h-[400px] md:h-[700px] img-shadow"
+              />
+              {/* orange ring circle */}
+              <div className="h-[180px] w-[180px] absolute top-24 -right-16 border-primary border-[20px] rounded-full z-10"></div>
+              <div></div>
             </div>
             {/* Third DIvnsection */}
           </div>
