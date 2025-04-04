@@ -46,7 +46,11 @@ const Hero = () => {
               />
               {/* orange ring circle */}
               <div className="h-[180px] w-[180px] absolute top-24 -right-16 border-primary border-[20px] rounded-full z-10"></div>
-              <div></div>
+              <div className="absolute -top-20 left-[200px] z-[1]">
+                <h1 className="text-[140px] scale-150 font-bold text-darkGray/40 leading-none">
+                  Black Tumbler
+                </h1>
+              </div>
             </div>
             {/* Third DIvnsection */}
           </div>
