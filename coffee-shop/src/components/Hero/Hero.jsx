@@ -9,7 +9,7 @@ const bgImage = {
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   height: "100vh",
-  eidth: "100vw",
+  width: "100vw",
 };
 
 const Hero = () => {
@@ -21,8 +21,18 @@ const Hero = () => {
           <Navbar />
           {/* Hero Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]">
-            {/* text content section */}
-            <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
+            {/* Left content section */}
+            <div
+              className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28 relative"
+              style={{
+                backgroundImage: `url(${BgImage})`,
+                backgroundSize: "contain", // Ensures the background fits the text content area
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                padding: "20px", // Optional: Adds padding around the content
+                minHeight: "fit-content", // Ensures the div grows according to content size
+              }}
+            >
               <motion.h1
                 initial={{ opacity: 1, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -30,7 +40,7 @@ const Hero = () => {
                   type: "spring",
                   stiffness: 100,
                   damping: 10,
-                  deplay: 1,
+                  delay: 1,
                 }}
                 className="text-7xl font-bold leading-tight ml-14"
               >
@@ -43,7 +53,7 @@ const Hero = () => {
                   type: "spring",
                   stiffness: 100,
                   damping: 10,
-                  deplay: 1.2,
+                  delay: 1.2,
                 }}
                 className="relative"
               >
@@ -57,9 +67,10 @@ const Hero = () => {
                     doloribus!
                   </h1>
                 </div>
-                <div className="absolute -top-6 -left-10 w-[25-px] h-[180px] bg-gray-700/25"></div>
+                <div className="absolute -top-6 -left-10 w-[25px] h-[180px] bg-gray-700/25"></div>
               </motion.div>
             </div>
+
             {/* Hero Image  section */}
             <div className="relative">
               <motion.img
@@ -107,7 +118,7 @@ const Hero = () => {
                 </motion.h1>
               </motion.div>
             </div>
-            {/* Third DIv section */}
+            {/* right section */}
             <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
               <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14">
                 Black Tumbler
