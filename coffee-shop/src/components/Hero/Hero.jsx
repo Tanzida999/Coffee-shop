@@ -44,7 +44,7 @@ const Hero = () => {
                 }}
                 className="text-7xl font-bold leading-tight ml-14"
               >
-                Black Tumbler
+                Bangla Tong
               </motion.h1>
               <motion.div
                 initial={{ opacity: 1, y: 100 }}
@@ -71,7 +71,7 @@ const Hero = () => {
               </motion.div>
             </div>
 
-            {/* Hero Image  section */}
+            {/* Hero Image section */}
             <div className="relative">
               <motion.img
                 initial={{ opacity: 1, scale: 0 }}
@@ -114,14 +114,30 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   className="text-[140px] scale-150 font-bold text-darkGray/40 leading-none"
                 >
-                  Black Tumbler
+                  Bangla Tong
                 </motion.h1>
               </motion.div>
             </div>
-            {/* right section */}
-            <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
+
+            {/* Right section */}
+            <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28 relative">
+              {/* Big Watermark Text */}
+              <motion.h1
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                  delay: 1,
+                }}
+                className="text-9xl font-bold leading-none absolute top-10 right-10 text-darkGray/40"
+              >
+                Bangla Tong
+              </motion.h1>
+
               <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14">
-                Black Tumbler
+                Bangla Tong
               </h1>
               <div className="relative">
                 <motion.div
@@ -135,7 +151,7 @@ const Hero = () => {
                   }}
                   className="relative z-10 space-y-4"
                 >
-                  <h1 className="text-2xl">Black Tumbler</h1>
+                  <h1 className="text-2xl">Bangla Tong</h1>
                   <h1 className="text-sm opacity-55 loading-loose">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Alias commodi.
