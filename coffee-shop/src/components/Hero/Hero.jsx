@@ -3,6 +3,7 @@ import BgImage from "../../assets/bg-slate.png";
 import BlackCoffee from "../../assets/black.png";
 import Navbar from "./Navbar/Navbar";
 import { motion } from "framer-motion";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 const bgImage = {
   backgroundImage: `url(${BgImage})`,
   backgroundSize: "cover",
@@ -13,12 +14,13 @@ const bgImage = {
 };
 
 const Hero = () => {
+  const [sidebar, setSidebar] = React.useState(false);
   return (
     <main style={bgImage}>
       <section className="min-h-[750px] w-full">
         <div className="container">
           {/* navbar Section */}
-          <Navbar />
+          <Navbar sidebar={sidebar} setSidebar={setSidebar} />
           {/* Hero Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]">
             {/* Left content section */}
@@ -162,6 +164,36 @@ const Hero = () => {
             </div>
             <div></div>
           </div>
+          {/* SideBar Menu Section */}
+          {sidebar && (
+            <motion.div
+              initial={{ x: "100%" }}
+              whileInView={{ x: 0 }}
+              className="absolute top-0 right-0 w-[140px] bg-gradient-to-b from-primary/80 h-full to-primaryDark/80 backdrop-blur-sm z-10"
+            >
+              <div className="w-full h-full flex justify-center items-center">
+                <div className="flex flex-col justify-center items-center gap-6 text-white">
+                  {/* line */}
+                  <div className="w-[1px] h-[70px] bg-white"></div>
+
+                  {/* Social Icons */}
+                  <div className="inline-block p-2 rounded-full cursor-pointer border border-white">
+                    <FaFacebookF className="text-2xl" />
+                  </div>
+                  <div className="inline-block p-2 rounded-full cursor-pointer border border-white">
+                    <FaTwitter className="text-2xl" />
+                  </div>
+                  <div className="inline-block p-2 rounded-full cursor-pointer border border-white">
+                    <FaInstagram className="text-2xl" />
+                  </div>
+
+                  {/* line */}
+                  <div className="w-[1px] h-[70px] bg-white"></div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+          ;
         </div>
       </section>
     </main>
